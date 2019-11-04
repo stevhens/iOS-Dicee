@@ -13,7 +13,6 @@ var diceArray : Array = ["dice1", "dice2", "dice3", "dice4", "dice5", "dice6"]
 var firstRandomIndex : Int = 0
 var secondRandomIndex : Int = 0
 
-
 class ViewController: UIViewController {
 
     @IBOutlet weak var firstDiceImageView: UIImageView!
@@ -25,8 +24,6 @@ class ViewController: UIViewController {
 
         
     }
-
-    
     
     @IBAction func rollPressed(_ sender: AnyObject) {
         
@@ -42,14 +39,11 @@ class ViewController: UIViewController {
         secondDiceImageView.image = UIImage(named: diceArray[secondRandomIndex])
     }
     
-    
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
             updateDiceImages()
         }
     }
-    
-
 
 }
 
